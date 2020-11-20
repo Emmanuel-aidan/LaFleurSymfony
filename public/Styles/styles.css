@@ -1,0 +1,95 @@
+body {
+    width: 1280px;
+    margin: 20px;
+}
+
+.a:hover {
+    color: green;
+}
+
+.post {
+    margin: 0;
+}
+
+.textenblanc {
+    color: #FFFFFF;
+}
+
+.blink_me {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 12s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 10s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blinker;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {
+    0% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes blinker {
+    0% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+.li {
+    font-size: 97%;
+    display: outside;
+    list-style-image: url(../Images/Divers/PuceFleur.png);
+}
+
+.un {
+    list-style: outside;
+    font-size: 100%;
+}
+
+.tabcontact:table {
+
+    margin: auto;
+    width: 50%;
+    border: medium solid royalblue;
+    background-color: aqua;
+}
+

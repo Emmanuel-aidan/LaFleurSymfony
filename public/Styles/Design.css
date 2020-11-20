@@ -1,0 +1,84 @@
+#blocpage {
+    width: 1280px;
+    margin: auto;
+    margin-top: 10px;
+    background-image: url("../Images/Divers/fond-page.jpg");
+}
+
+#blocbandeau {
+    width: 1280px;
+    height: 120px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    background-image: url("../Images/Divers/fond-entete1280.png");
+}
+
+#blocprincipal {
+    width: 1280px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#blocmenu {
+    width: 190px;
+    height: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+
+}
+
+#bloccontenu {
+    width: 900px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../Images/Divers/fondbleu.jpg");
+    border-width: 3px;
+    border-style: outset;
+    border-color: black;
+    justify-content: center;
+    
+
+}
+
+#bolcdroit {
+    width: 140px;
+    height: 600px;
+    display: flex;
+
+
+
+}
+
+#blocconnexion {
+    margin: 3px;
+    width: 140px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    border-width: 1px;
+    border-style: inset;
+    padding: 3px;
+
+}
+
+#blocnews {
+    margin: 5px;
+    width: 140px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    border-width: 2px;
+    border-style: outset;
+    border-color: black;
+    padding: 3px;
+    align-items: center;
+
+}
