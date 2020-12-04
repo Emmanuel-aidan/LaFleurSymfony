@@ -37,6 +37,8 @@ class News
      */
     private $image;
 
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -83,10 +85,11 @@ class News
         return $this->image;
     }
 
-    public function setImage(?string $image): self
+    public function setImage(string $image): self
     {
         $this->image = $image;
 
         return $this;
     }
+
 }
