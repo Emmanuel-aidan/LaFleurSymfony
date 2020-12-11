@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des utilisateur{% endblock %}
+
+{% block body %}
+    <h1>Liste des utilisateur</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Rôles</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for utilisateur in utilisateurs %}
+            <tr>
+                <td>{{ utilisateur.id }}</td>
+                <td>{{ utilisateur.email }}</td>
+                <td> {% for unRole in utilisateur.roles %}
+                    {% if unRole == "ROLE_USER" %}
+                        Utilisateur
+                    {% elseif unRole == "ROLE_EDITOR" %}
+                        Editeur
+                    {% else %}
+                        Administrateur
+                    {% endif %}
+                {% endfor %} 
+                
+                </td>
+                <td>{{ utilisateur.nom }}</td>
+                <td>{{ utilisateur.prenom }}</td>
+                <td>
+                    <a href="{{ path('utilisateur_show', {'id': utilisateur.id}) }}">Voir</a>
+                    <a href="{{ path('utilisateur_edit', {'id': utilisateur.id}) }}">Editer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Pas d'utilisateurs trouvés</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('utilisateur_new') }}" class="btn btn-primary">Créer un nouvel utilisateur</a>
+{% endblock %}

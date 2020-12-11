@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Utilisateur{% endblock %}
+
+{% block body %}
+    <h1>Utilisateur</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ utilisateur.id }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ utilisateur.email }}</td>
+            </tr>
+            <tr>
+                <th>Roles</th>
+                <td>{% for unRole in utilisateur.roles %}
+                    {% if unRole == "ROLE_USER" %}
+                        Utilisateur
+                    {% elseif unRole == "ROLE_EDITOR" %}
+                        Editeur
+                    {% else %}
+                        Administrateur
+                    {% endif %}
+                {% endfor %} 
+                </td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ utilisateur.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ utilisateur.prenom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('utilisateur_index') }}" class="btn btn-warning">Retour à la liste</a>
+</br>
+    <a href="{{ path('utilisateur_edit', {'id': utilisateur.id}) }}" class="btn btn-primary">Editer</a>
+
+</br>
+    {{ include('utilisateur/_delete_form.html.twig') }}
+{% endblock %}
